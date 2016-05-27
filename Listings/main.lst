@@ -1,0 +1,223 @@
+C51 COMPILER V9.55   MAIN                                                                  05/27/2016 11:48:11 PAGE 1   
+
+
+C51 COMPILER V9.55, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\Objects\main.obj
+COMPILER INVOKED BY: E:\Keil_v5\C51\BIN\C51.EXE src\main.c LARGE OPTIMIZE(8,SPEED) BROWSE INCDIR(.\inc) DEBUG OBJECTEXTE
+                    -ND PRINT(.\Listings\main.lst) TABS(2) OBJECT(.\Objects\main.obj)
+
+line level    source
+
+   1          #include "config.h"
+   2          #include "delay.h"
+   3          #include "uart.h"
+   4          #include "dht11.h"
+   5          #include "nokia5110.h"
+   6          #include "infracsonic.h"
+   7          #include "stdio.h"
+   8          
+   9          
+  10          #define NORMAL 1
+  11          #define ADJUST_MIN 2
+  12          #define ADJUST_MAX 3
+  13          
+  14          
+  15          uchar status = 1;
+  16          uchar hum,tem;
+  17          uchar count;
+  18          uchar min_value = 44,max_value = 48;
+  19          double dist = 0;
+  20          uchar temp;
+  21          bit hum_on = False;
+  22          bit need_hum = False;
+  23          
+  24          
+  25          void main()
+  26          {
+  27   1        T_H tem_hum;
+  28   1        
+  29   1        P1M0 |= 0x04;
+  30   1        P1M1 &=~ 0x04;  //LED推挽输出
+  31   1        
+  32   1        P0M0 |= 0x80;
+  33   1        P0M1 &=~ 0x80;  //雾化器控制口推挽输出
+  34   1        
+  35   1        IT0 = 1;  //下降沿
+  36   1        EX0 = 1;  //外部中断
+  37   1        
+  38   1        InitUart1();
+  39   1        Init5110();
+  40   1        InitTimer1();
+  41   1      
+  42   1        lcdWriteChineseStr(Shandongdaxue,10,0,4);
+  43   1        lcdWriteChineseStr(Hongjingbei,20,2,3);
+  44   1          
+  45   1        delay_ms(2000); //上电延时
+  46   1        
+  47   1        lcdClear();
+  48   1        
+  49   1        printf("Init Complete!\r\n");
+  50   1        
+  51   1              
+  52   1        while(1)
+  53   1        {
+  54   2          HUMIDIFIER = 1;
+C51 COMPILER V9.55   MAIN                                                                  05/27/2016 11:48:11 PAGE 2   
+
+  55   2          if(hum_on != need_hum)
+  56   2          {
+  57   3            HUMIDIFIER = 0;
+  58   3            delay_ms(100);
+  59   3            HUMIDIFIER = 1;
+  60   3            hum_on = ~hum_on;
+  61   3            printf("Hum Switch!\r\n\r\n");
+  62   3          }
+  63   2          
+  64   2          lcdPutStr("Status:",0,0);
+  65   2          lcdShowDouble(0,7,(double)status,0);
+  66   2          
+  67   2          lcdPutStr("Min:",0,3);
+  68   2          lcdShowDouble(3,4,(double)min_value,0);
+  69   2          lcdPutStr("Max:",7,3);
+  70   2          lcdShowDouble(3,11,(double)max_value,0);
+  71   2          
+  72   2          
+  73   2          switch(status)
+  74   2          {
+  75   3            case NORMAL:{
+  76   4              LED = 1;
+  77   4              delay_ms(600);
+  78   4              LED = 0;
+  79   4              delay_ms(600);
+  80   4              
+  81   4              tem_hum = Rec_DHT();
+  82   4              tem = tem_hum.Tem_Z;
+  83   4              hum = tem_hum.Hum_Z;
+  84   4              dist = distance();
+  85   4              
+  86   4              if(hum < min_value)
+  87   4                need_hum = True;
+  88   4              if(hum > max_value)
+  89   4                need_hum = False;
+  90   4                      
+  91   4              lcdClearAny(5,0,13);
+  92   4              if(hum_on == True)
+  93   4                lcdPutStr("Hum On",0,5);
+  94   4              else if(hum_on == False)
+  95   4                lcdPutStr("Hum Off",0,5);
+  96   4              
+  97   4              printf("need_hum:%u\r\nhum_on:%u\r\n\r\n",(uint)need_hum,(uint)hum_on);
+  98   4              
+  99   4              lcdShowDouble(1,0,(double)tem,0);
+ 100   4              lcdPutStr("'C",2,1);
+ 101   4              lcdShowDouble(1,7,(double)hum,0);
+ 102   4              lcdPutStr("%",9,1);
+ 103   4              lcdShowDouble(4,0,dist,3);
+ 104   4              printf("Status:%u\r\nTemperature:%u\r\nHumidity:%u\r\n%u<Hum<%u\r\n\r\n",(uint)status,(uint)tem_hum.Te
+             -m_Z,(uint)tem_hum.Hum_Z,(uint)min_value,(uint)max_value);
+ 105   4              
+ 106   4              
+ 107   4              break;
+ 108   4            }
+ 109   3            case ADJUST_MIN:{
+ 110   4              KEY_INC = 0;
+ 111   4              KEY_DEC = 0;
+ 112   4              if(KEY_INC == 1)
+ 113   4              {
+ 114   5                delay_ms(20);
+ 115   5                if(KEY_INC == 0)
+C51 COMPILER V9.55   MAIN                                                                  05/27/2016 11:48:11 PAGE 3   
+
+ 116   5                {
+ 117   6                  printf("inc\r\n");
+ 118   6                  if(++min_value >= max_value)
+ 119   6                    min_value = max_value;
+ 120   6                }
+ 121   5              }
+ 122   4              if(KEY_DEC == 1)
+ 123   4              {
+ 124   5                delay_ms(20);
+ 125   5                if(KEY_DEC == 0)
+ 126   5                {
+ 127   6                  printf("dec\r\n");
+ 128   6                  if(--min_value <= 10)
+ 129   6                    min_value = 10;
+ 130   6                }
+ 131   5              }
+ 132   4                
+ 133   4              break;
+ 134   4            }
+ 135   3            case ADJUST_MAX:{
+ 136   4              KEY_INC = 0;
+ 137   4              KEY_DEC = 0;
+ 138   4              if(KEY_INC == 1)
+ 139   4              {
+ 140   5                delay_ms(20);
+ 141   5                if(KEY_INC == 0)
+ 142   5                {
+ 143   6                  printf("inc\r\n");
+ 144   6                  if(++max_value >= 80)
+ 145   6                    max_value = 80;
+ 146   6                }
+ 147   5              }
+ 148   4              if(KEY_DEC == 1)
+ 149   4              {
+ 150   5                delay_ms(20);
+ 151   5                if(KEY_DEC == 0)
+ 152   5                {
+ 153   6                  printf("dec\r\n");
+ 154   6                  if(--max_value <= min_value)
+ 155   6                    max_value = min_value;
+ 156   6                }
+ 157   5              }
+ 158   4              
+ 159   4              break;
+ 160   4            }
+ 161   3            
+ 162   3          }
+ 163   2        }
+ 164   1      }
+ 165          
+ 166          //使用printf要打开串口中断清除TI位
+ 167          void Uart1() interrupt 4 using 1
+ 168          {
+ 169   1        uchar a;
+ 170   1          if (RI)
+ 171   1          {
+ 172   2              RI = 0;                 //清除RI位
+ 173   2              a = SBUF;              //P0显示串口数据
+ 174   2          SBUF=a;
+ 175   2          }
+ 176   1          if (TI)
+ 177   1          {
+C51 COMPILER V9.55   MAIN                                                                  05/27/2016 11:48:11 PAGE 4   
+
+ 178   2              TI = 0;                 //清除TI位
+ 179   2              busy1 = 0;               //清忙标志
+ 180   2          }
+ 181   1      }
+ 182          
+ 183          void exint0() interrupt 0
+ 184          {
+ 185   1        delay_ms(20);
+ 186   1        if(!KEY_ADJUST)
+ 187   1        {
+ 188   2          status++;
+ 189   2          if(status == 4)
+ 190   2            status = 1;
+ 191   2        }
+ 192   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    911    ----
+   CONSTANT SIZE    =   1096    ----
+   XDATA SIZE       =     11       4
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =      2    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

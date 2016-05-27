@@ -1,0 +1,8 @@
+".\Objects\main.obj",
+".\Objects\delay.obj",
+".\Objects\infracsonic.obj",
+".\Objects\Uart.obj",
+".\Objects\dht11.obj",
+".\Objects\nokia5110.obj" 
+TO ".\Objects\hongjing2016" 
+PRINT(".\Listings\hongjing2016.m51") RAMSIZE(256) 

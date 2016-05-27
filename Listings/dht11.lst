@@ -1,0 +1,135 @@
+C51 COMPILER V9.55   DHT11                                                                 05/27/2016 11:03:59 PAGE 1   
+
+
+C51 COMPILER V9.55, COMPILATION OF MODULE DHT11
+OBJECT MODULE PLACED IN .\Objects\dht11.obj
+COMPILER INVOKED BY: E:\Keil_v5\C51\BIN\C51.EXE src\dht11.c LARGE OPTIMIZE(8,SPEED) BROWSE INCDIR(.\inc) DEBUG OBJECTEXT
+                    -END PRINT(.\Listings\dht11.lst) TABS(2) OBJECT(.\Objects\dht11.obj)
+
+line level    source
+
+   1          #include "dht11.h"
+   2          
+   3          
+   4          void DHT11_Start()           //主机发出开始信号
+   5          {
+   6   1      //         DHTIO=1;
+   7   1      //         delay_us(10);
+   8   1               DHTIO=0;
+   9   1               Delay20ms();   //保持电平时间大于18ms
+  10   1               DHTIO=1;
+  11   1               Delay10us();
+  12   1               Delay10us();
+  13   1               Delay10us(); //延迟等待20-40us
+  14   1      }
+  15          /********DHT11接收一个字节*******/
+  16          uchar receive_data()
+  17          {
+  18   1        uchar i;
+  19   1        uchar temp = 0;
+  20   1        for(i = 0; i < 8;i++)
+  21   1        {
+  22   2          temp = temp<<1;
+  23   2          while(!DHTIO);
+  24   2          Delay10us();
+  25   2          Delay10us();
+  26   2          Delay10us();
+  27   2          Delay10us();
+  28   2          Delay10us();
+  29   2          if(DHTIO)
+  30   2          {
+  31   3            temp |= 0x01;
+  32   3            Delay10us();
+  33   3            Delay10us();
+  34   3            Delay10us();
+  35   3            Delay10us();
+  36   3          }
+  37   2          else
+  38   2          {
+  39   3            temp &= 0xFE;
+  40   3          }
+  41   2        }
+  42   1        return temp;
+  43   1      }
+  44          //uchar receive_data()
+  45          //{
+  46          //  uchar data_byte;
+  47          //  uchar i,temp,count;
+  48          // data_byte=0;
+  49          // for(i=0;i<8;i++)
+  50          // {
+  51          //    count=2;
+  52          //    while(!DHTIO);//等待50us低电平结束
+  53          //   printf("data comes\r\n");
+  54          //   temp=0;
+C51 COMPILER V9.55   DHT11                                                                 05/27/2016 11:03:59 PAGE 2   
+
+  55          //    delay_us(40);
+  56          //    if(DHTIO)  
+  57          //    {     
+  58          //      printf("temp = 1\r\n");
+  59          //      temp=1;
+  60          //      count=2;
+  61          //      //while((DHTIO)&&count++);   
+  62          //      while(DHTIO);
+  63          //    }
+  64          //    printf("data finish,temp = %u\r\n",(uint)temp);
+  65          //    data_byte<<=1;  
+  66          //    data_byte|=temp;
+  67          // }
+  68          //  return data_byte;
+  69          //}
+  70          /********DHT11接收数据*******/
+  71          T_H Rec_DHT()
+  72          {
+  73   1        uchar Check,Tem_Z,Tem_X,Hum_Z,Hum_X;
+  74   1        uint sum;
+  75   1        T_H t_h = {0,0,0,0};
+  76   1        uchar flag;
+  77   1        DHT11_Start();//开始
+  78   1        DHTIO=1;      //等待响应
+  79   1        while(DHTIO);
+  80   1        if(!DHTIO)    //从机响应
+  81   1        {
+  82   2          while(!DHTIO); 
+  83   2          //判断从机是否发出80us低电平
+  84   2          while(DHTIO);
+  85   2          //判断从机是否发出80us高电平
+  86   2          Hum_Z = receive_data();   //湿度整数
+  87   2          Hum_X = receive_data();   //湿度小数
+  88   2          Tem_Z = receive_data();   //温度整数
+  89   2          Tem_X = receive_data();   //温度小数
+  90   2          Check = receive_data();   //校验位
+  91   2          DHTIO = 1;
+  92   2          
+  93   2          sum = Tem_Z + Tem_X + Hum_Z + Hum_X;
+  94   2          
+  95   2          //if(Check == sum&0xFF)
+  96   2          if(1)
+  97   2          {
+  98   3            t_h.Tem_Z = Tem_Z;
+  99   3            t_h.Tem_X = Tem_X;
+ 100   3            t_h.Hum_Z = Hum_Z;
+ 101   3            t_h.Hum_X = Hum_X;
+ 102   3          }
+ 103   2        }
+ 104   1        return t_h;
+ 105   1      }
+*** WARNING C280 IN LINE 76 OF src\dht11.c: 'flag': unreferenced local variable
+ 106            
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    237    ----
+   CONSTANT SIZE    =      4    ----
+   XDATA SIZE       =   ----      14
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+C51 COMPILER V9.55   DHT11                                                                 05/27/2016 11:03:59 PAGE 3   
+
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  1 WARNING(S),  0 ERROR(S)
