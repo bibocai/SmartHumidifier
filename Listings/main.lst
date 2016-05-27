@@ -1,4 +1,4 @@
-C51 COMPILER V9.55   MAIN                                                                  05/27/2016 11:48:11 PAGE 1   
+C51 COMPILER V9.55   MAIN                                                                  05/27/2016 20:36:36 PAGE 1   
 
 
 C51 COMPILER V9.55, COMPILATION OF MODULE MAIN
@@ -62,7 +62,7 @@ line level    source
   52   1        while(1)
   53   1        {
   54   2          HUMIDIFIER = 1;
-C51 COMPILER V9.55   MAIN                                                                  05/27/2016 11:48:11 PAGE 2   
+C51 COMPILER V9.55   MAIN                                                                  05/27/2016 20:36:36 PAGE 2   
 
   55   2          if(hum_on != need_hum)
   56   2          {
@@ -126,7 +126,7 @@ line level    source
  113   4              {
  114   5                delay_ms(20);
  115   5                if(KEY_INC == 0)
-C51 COMPILER V9.55   MAIN                                                                  05/27/2016 11:48:11 PAGE 3   
+C51 COMPILER V9.55   MAIN                                                                  05/27/2016 20:36:36 PAGE 3   
 
  116   5                {
  117   6                  printf("inc\r\n");
@@ -190,7 +190,7 @@ line level    source
  175   2          }
  176   1          if (TI)
  177   1          {
-C51 COMPILER V9.55   MAIN                                                                  05/27/2016 11:48:11 PAGE 4   
+C51 COMPILER V9.55   MAIN                                                                  05/27/2016 20:36:36 PAGE 4   
 
  178   2              TI = 0;                 //清除TI位
  179   2              busy1 = 0;               //清忙标志

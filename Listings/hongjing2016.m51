@@ -1,4 +1,4 @@
-BL51 BANKED LINKER/LOCATER V6.22                                                        05/27/2016  11:49:31  PAGE 1
+BL51 BANKED LINKER/LOCATER V6.22                                                        05/27/2016  20:53:54  PAGE 1
 
 
 BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
@@ -16,7 +16,6 @@ INPUT MODULES INCLUDED:
   .\Objects\Uart.obj (UART)
   .\Objects\dht11.obj (DHT11)
   .\Objects\nokia5110.obj (NOKIA5110)
-  E:\KEIL_V5\C51\LIB\C51FPL.LIB (?C?FPADD)
   E:\KEIL_V5\C51\LIB\C51FPL.LIB (?C?FPMUL)
   E:\KEIL_V5\C51\LIB\C51FPL.LIB (?C?FPDIV)
   E:\KEIL_V5\C51\LIB\C51FPL.LIB (?C?FPCMP)
@@ -27,6 +26,7 @@ INPUT MODULES INCLUDED:
   E:\KEIL_V5\C51\LIB\C51FPL.LIB (?C?FPGETOPN)
   E:\KEIL_V5\C51\LIB\C51FPL.LIB (?C?FPROUND)
   E:\KEIL_V5\C51\LIB\C51FPL.LIB (?C?FPCONVERT)
+  E:\KEIL_V5\C51\LIB\C51FPL.LIB (?C?FPADD)
   E:\KEIL_V5\C51\LIB\C51FPL.LIB (?C?FTNPWR)
   E:\KEIL_V5\C51\LIB\C51L.LIB (?C_STARTUP)
   E:\KEIL_V5\C51\LIB\C51L.LIB (?C?COPY)
@@ -59,7 +59,7 @@ LINK MAP OF MODULE:  .\Objects\hongjing2016 (MAIN)
             REG     0008H     0008H     ABSOLUTE     "REG BANK 1"
             DATA    0010H     0005H     UNIT         _DATA_GROUP_
                     0015H     000BH                  *** GAP ***
-BL51 BANKED LINKER/LOCATER V6.22                                                      05/27/2016  11:49:31  PAGE 2
+BL51 BANKED LINKER/LOCATER V6.22                                                      05/27/2016  20:53:54  PAGE 2
 
 
             BIT     0020H.0   0001H.1   UNIT         _BIT_GROUP_
@@ -88,44 +88,44 @@ LINK MAP OF MODULE:  .\Objects\hongjing2016 (MAIN)
             CODE    12E5H     0448H     UNIT         ?CO?MAIN
             CODE    172DH     0328H     UNIT         ?PR?MAIN?MAIN
             CODE    1A55H     028DH     UNIT         ?PR?_LCDSHOWDOUBLE?NOKIA5110
-            CODE    1CE2H     00E4H     UNIT         ?PR?DISTANCE?INFRACSONIC
-            CODE    1DC6H     009AH     UNIT         ?PR?_GETKEY?UART
-            CODE    1E60H     008DH     UNIT         ?PR?REC_DHT?DHT11
-            CODE    1EEDH     008CH     UNIT         ?C_C51STARTUP
-            CODE    1F79H     008BH     UNIT         ?PR?_LCDWRITECHINESESTR?NOKIA5110
-            CODE    2004H     0066H     UNIT         ?PR?_LCDWRITECHINESE?NOKIA5110
-            CODE    206AH     0050H     UNIT         ?PR?RECEIVE_DATA?DHT11
-            CODE    20BAH     004FH     UNIT         ?PR?EXINT0?MAIN
-            CODE    2109H     004FH     UNIT         ?C_INITSEG
-            CODE    2158H     004BH     UNIT         ?PR?INIT5110?NOKIA5110
-            CODE    21A3H     0049H     UNIT         ?PR?_LCDDC?NOKIA5110
-            CODE    21ECH     003BH     UNIT         ?PR?_LCDCLEARANY?NOKIA5110
-            CODE    2227H     0033H     UNIT         ?PR?_UART1SENDSTR?UART
-            CODE    225AH     0033H     UNIT         ?PR?_UART2SENDSTR?UART
-            CODE    228DH     0033H     UNIT         ?PR?_LCDWRITECHAR6_8?NOKIA5110
-            CODE    22C0H     0033H     UNIT         ?PR?_LCDWRITESTR?NOKIA5110
-            CODE    22F3H     002EH     UNIT         ?PR?_LCDWRITECHAR16_16?NOKIA5110
-            CODE    2321H     0024H     UNIT         ?PR?_LCDWRITECHAR?NOKIA5110
-            CODE    2345H     0022H     UNIT         ?PR?LCDCLEAR?NOKIA5110
-            CODE    2367H     001BH     UNIT         ?PR?_PUTCHAR?UART
-            CODE    2382H     0019H     UNIT         ?PR?_LCDPUTSTR?NOKIA5110
-            CODE    239BH     0018H     UNIT         ?PR?UART1?MAIN
-            CODE    23B3H     0018H     UNIT         ?PR?_DELAY_MS?DELAY
-            CODE    23CBH     0015H     UNIT         ?PR?_DELAY_10MS?DELAY
-            CODE    23E0H     0014H     UNIT         ?PR?INITUART1?UART
-            CODE    23F4H     0012H     UNIT         ?PR?INITUART2?UART
-            CODE    2406H     0012H     UNIT         ?PR?_LCDSETXY?NOKIA5110
-            CODE    2418H     0010H     UNIT         ?PR?_DELAY_US?DELAY
-            CODE    2428H     0010H     UNIT         ?PR?DHT11_START?DHT11
-            CODE    2438H     000FH     UNIT         ?PR?DELAY20MS?DELAY
-            CODE    2447H     000EH     UNIT         ?PR?INITTIMER1?INFRACSONIC
-BL51 BANKED LINKER/LOCATER V6.22                                                      05/27/2016  11:49:31  PAGE 3
+            CODE    1CE2H     009AH     UNIT         ?PR?_GETKEY?UART
+            CODE    1D7CH     008DH     UNIT         ?PR?REC_DHT?DHT11
+            CODE    1E09H     008CH     UNIT         ?C_C51STARTUP
+            CODE    1E95H     008BH     UNIT         ?PR?_LCDWRITECHINESESTR?NOKIA5110
+            CODE    1F20H     0069H     UNIT         ?PR?DISTANCE?INFRACSONIC
+            CODE    1F89H     0066H     UNIT         ?PR?_LCDWRITECHINESE?NOKIA5110
+            CODE    1FEFH     0050H     UNIT         ?PR?RECEIVE_DATA?DHT11
+            CODE    203FH     004FH     UNIT         ?PR?EXINT0?MAIN
+            CODE    208EH     004FH     UNIT         ?C_INITSEG
+            CODE    20DDH     004BH     UNIT         ?PR?INIT5110?NOKIA5110
+            CODE    2128H     0049H     UNIT         ?PR?_LCDDC?NOKIA5110
+            CODE    2171H     003BH     UNIT         ?PR?_LCDCLEARANY?NOKIA5110
+            CODE    21ACH     0033H     UNIT         ?PR?_UART1SENDSTR?UART
+            CODE    21DFH     0033H     UNIT         ?PR?_UART2SENDSTR?UART
+            CODE    2212H     0033H     UNIT         ?PR?_LCDWRITECHAR6_8?NOKIA5110
+            CODE    2245H     0033H     UNIT         ?PR?_LCDWRITESTR?NOKIA5110
+            CODE    2278H     002EH     UNIT         ?PR?_LCDWRITECHAR16_16?NOKIA5110
+            CODE    22A6H     0024H     UNIT         ?PR?_LCDWRITECHAR?NOKIA5110
+            CODE    22CAH     0022H     UNIT         ?PR?LCDCLEAR?NOKIA5110
+            CODE    22ECH     001BH     UNIT         ?PR?_PUTCHAR?UART
+            CODE    2307H     0019H     UNIT         ?PR?_LCDPUTSTR?NOKIA5110
+            CODE    2320H     0018H     UNIT         ?PR?UART1?MAIN
+            CODE    2338H     0018H     UNIT         ?PR?_DELAY_MS?DELAY
+            CODE    2350H     0015H     UNIT         ?PR?_DELAY_10MS?DELAY
+            CODE    2365H     0014H     UNIT         ?PR?INITUART1?UART
+            CODE    2379H     0012H     UNIT         ?PR?INITUART2?UART
+            CODE    238BH     0012H     UNIT         ?PR?_LCDSETXY?NOKIA5110
+            CODE    239DH     0010H     UNIT         ?PR?_DELAY_US?DELAY
+            CODE    23ADH     0010H     UNIT         ?PR?DHT11_START?DHT11
+            CODE    23BDH     000FH     UNIT         ?PR?DELAY20MS?DELAY
+            CODE    23CCH     000EH     UNIT         ?PR?INITTIMER1?INFRACSONIC
+BL51 BANKED LINKER/LOCATER V6.22                                                      05/27/2016  20:53:54  PAGE 3
 
 
-            CODE    2455H     0008H     UNIT         ?PR?_UART1SENDDATA?UART
-            CODE    245DH     0008H     UNIT         ?PR?_UART2SENDDATA?UART
-            CODE    2465H     0006H     UNIT         ?PR?DELAY10US?DELAY
-            CODE    246BH     0004H     UNIT         ?CO?DHT11
+            CODE    23DAH     0008H     UNIT         ?PR?_UART1SENDDATA?UART
+            CODE    23E2H     0008H     UNIT         ?PR?_UART2SENDDATA?UART
+            CODE    23EAH     0006H     UNIT         ?PR?DELAY10US?DELAY
+            CODE    23F0H     0004H     UNIT         ?CO?DHT11
 
 
 
@@ -179,7 +179,7 @@ SEGMENT                                      BIT_GROUP          DATA_GROUP      
 
 ?PR?_LCDSETXY?NOKIA5110                   -----    -----      -----    -----      -----    -----
   +--> ?PR?_LCDDC?NOKIA5110
-BL51 BANKED LINKER/LOCATER V6.22                                                      05/27/2016  11:49:31  PAGE 4
+BL51 BANKED LINKER/LOCATER V6.22                                                      05/27/2016  20:53:54  PAGE 4
 
 
 
@@ -226,7 +226,7 @@ SEGMENT                                      BIT_GROUP          DATA_GROUP      
 ?PR?RECEIVE_DATA?DHT11                    -----    -----      -----    -----      00E6H    0002H
   +--> ?PR?DELAY10US?DELAY
 
-?PR?DISTANCE?INFRACSONIC                  -----    -----      -----    -----      00DAH    0008H
+?PR?DISTANCE?INFRACSONIC                  -----    -----      -----    -----      00DAH    0004H
   +--> ?PR?DELAY10US?DELAY
 
 
@@ -239,7 +239,7 @@ SYMBOL TABLE OF MODULE:  .\Objects\hongjing2016 (MAIN)
   -------         MODULE        MAIN
   C:0000H         SYMBOL        _ICE_DUMMY_
   D:0092H         PUBLIC        P1M0
-BL51 BANKED LINKER/LOCATER V6.22                                                      05/27/2016  11:49:31  PAGE 5
+BL51 BANKED LINKER/LOCATER V6.22                                                      05/27/2016  20:53:54  PAGE 5
 
 
   D:0093H         PUBLIC        P0M1
@@ -278,10 +278,10 @@ SYMBOL TABLE OF MODULE:  .\Objects\hongjing2016 (MAIN)
   X:0128H         PUBLIC        hum
   B:0088H.0       PUBLIC        IT0
   B:00A8H.0       PUBLIC        EX0
-  C:239BH         PUBLIC        Uart1
+  C:2320H         PUBLIC        Uart1
   C:164DH         SYMBOL        Shandongdaxue
   B:0090H.2       PUBLIC        LED
-  C:20BAH         PUBLIC        exint0
+  C:203FH         PUBLIC        exint0
   B:0080H.7       PUBLIC        HUMIDIFIER
   C:16CDH         SYMBOL        Hongjingbei
   D:00D0H         PUBLIC        PSW
@@ -299,7 +299,7 @@ SYMBOL TABLE OF MODULE:  .\Objects\hongjing2016 (MAIN)
   C:1739H         LINE#         35
   C:173BH         LINE#         36
   C:173DH         LINE#         38
-BL51 BANKED LINKER/LOCATER V6.22                                                      05/27/2016  11:49:31  PAGE 6
+BL51 BANKED LINKER/LOCATER V6.22                                                      05/27/2016  20:53:54  PAGE 6
 
 
   C:1740H         LINE#         39
@@ -359,7 +359,7 @@ SYMBOL TABLE OF MODULE:  .\Objects\hongjing2016 (MAIN)
   C:199FH         LINE#         110
   C:19A1H         LINE#         111
   C:19A3H         LINE#         112
-BL51 BANKED LINKER/LOCATER V6.22                                                      05/27/2016  11:49:31  PAGE 7
+BL51 BANKED LINKER/LOCATER V6.22                                                      05/27/2016  20:53:54  PAGE 7
 
 
   C:19A6H         LINE#         113
@@ -412,33 +412,33 @@ SYMBOL TABLE OF MODULE:  .\Objects\hongjing2016 (MAIN)
   -------         DO            
   D:000FH         SYMBOL        a
   -------         ENDDO         
-  C:239BH         LINE#         167
-  C:23A0H         LINE#         170
-  C:23A3H         LINE#         171
-  C:23A3H         LINE#         172
-  C:23A5H         LINE#         173
-  C:23A7H         LINE#         174
-  C:23A9H         LINE#         175
-BL51 BANKED LINKER/LOCATER V6.22                                                      05/27/2016  11:49:31  PAGE 8
+  C:2320H         LINE#         167
+  C:2325H         LINE#         170
+  C:2328H         LINE#         171
+  C:2328H         LINE#         172
+  C:232AH         LINE#         173
+  C:232CH         LINE#         174
+  C:232EH         LINE#         175
+BL51 BANKED LINKER/LOCATER V6.22                                                      05/27/2016  20:53:54  PAGE 8
 
 
-  C:23A9H         LINE#         176
-  C:23ACH         LINE#         177
-  C:23ACH         LINE#         178
-  C:23AEH         LINE#         179
-  C:23B0H         LINE#         180
-  C:23B0H         LINE#         181
+  C:232EH         LINE#         176
+  C:2331H         LINE#         177
+  C:2331H         LINE#         178
+  C:2333H         LINE#         179
+  C:2335H         LINE#         180
+  C:2335H         LINE#         181
   -------         ENDPROC       UART1
   -------         PROC          EXINT0
-  C:20BAH         LINE#         183
-  C:20D7H         LINE#         185
-  C:20DEH         LINE#         186
-  C:20E1H         LINE#         187
-  C:20E1H         LINE#         188
-  C:20E7H         LINE#         189
-  C:20EBH         LINE#         190
-  C:20EEH         LINE#         191
-  C:20EEH         LINE#         192
+  C:203FH         LINE#         183
+  C:205CH         LINE#         185
+  C:2063H         LINE#         186
+  C:2066H         LINE#         187
+  C:2066H         LINE#         188
+  C:206CH         LINE#         189
+  C:2070H         LINE#         190
+  C:2073H         LINE#         191
+  C:2073H         LINE#         192
   -------         ENDPROC       EXINT0
   -------         ENDMOD        MAIN
 
@@ -456,48 +456,48 @@ SYMBOL TABLE OF MODULE:  .\Objects\hongjing2016 (MAIN)
   D:00B8H         PUBLIC        IP
   D:00D8H         PUBLIC        CCON
   D:0098H         PUBLIC        SCON
-  C:23CBH         PUBLIC        _delay_10ms
+  C:2350H         PUBLIC        _delay_10ms
   D:0088H         PUBLIC        TCON
-  C:2438H         PUBLIC        Delay20ms
-  C:2465H         PUBLIC        Delay10us
-  C:23B3H         PUBLIC        _delay_ms
-  C:2418H         PUBLIC        _delay_us
+  C:23BDH         PUBLIC        Delay20ms
+  C:23EAH         PUBLIC        Delay10us
+  C:2338H         PUBLIC        _delay_ms
+  C:239DH         PUBLIC        _delay_us
   D:00D0H         PUBLIC        PSW
   -------         PROC          _DELAY_US
   D:0006H         SYMBOL        t
-  C:2418H         LINE#         3
-  C:2418H         LINE#         4
-  C:2418H         LINE#         5
-  C:2422H         LINE#         6
-  C:2422H         LINE#         7
-  C:2423H         LINE#         8
-  C:2424H         LINE#         9
-  C:2425H         LINE#         10
-  C:2427H         LINE#         11
+  C:239DH         LINE#         3
+  C:239DH         LINE#         4
+  C:239DH         LINE#         5
+  C:23A7H         LINE#         6
+  C:23A7H         LINE#         7
+  C:23A8H         LINE#         8
+  C:23A9H         LINE#         9
+  C:23AAH         LINE#         10
+  C:23ACH         LINE#         11
   -------         ENDPROC       _DELAY_US
   -------         PROC          _DELAY_MS
   D:0006H         SYMBOL        t
   -------         DO            
   D:0005H         SYMBOL        i
-BL51 BANKED LINKER/LOCATER V6.22                                                      05/27/2016  11:49:31  PAGE 9
+BL51 BANKED LINKER/LOCATER V6.22                                                      05/27/2016  20:53:54  PAGE 9
 
 
   D:0004H         SYMBOL        j
   -------         ENDDO         
-  C:23B3H         LINE#         13
-  C:23B3H         LINE#         14
-  C:23B3H         LINE#         16
-  C:23BDH         LINE#         17
-  C:23BDH         LINE#         18
-  C:23BEH         LINE#         19
-  C:23BFH         LINE#         20
-  C:23C0H         LINE#         21
-  C:23C2H         LINE#         22
-  C:23C4H         LINE#         24
-  C:23C4H         LINE#         25
-  C:23C6H         LINE#         26
-  C:23C8H         LINE#         27
-  C:23CAH         LINE#         28
+  C:2338H         LINE#         13
+  C:2338H         LINE#         14
+  C:2338H         LINE#         16
+  C:2342H         LINE#         17
+  C:2342H         LINE#         18
+  C:2343H         LINE#         19
+  C:2344H         LINE#         20
+  C:2345H         LINE#         21
+  C:2347H         LINE#         22
+  C:2349H         LINE#         24
+  C:2349H         LINE#         25
+  C:234BH         LINE#         26
+  C:234DH         LINE#         27
+  C:234FH         LINE#         28
   -------         ENDPROC       _DELAY_MS
   -------         PROC          _DELAY_10MS
   D:0006H         SYMBOL        t
@@ -505,28 +505,28 @@ SYMBOL TABLE OF MODULE:  .\Objects\hongjing2016 (MAIN)
   D:0005H         SYMBOL        i
   D:0004H         SYMBOL        j
   -------         ENDDO         
-  C:23CBH         LINE#         30
-  C:23CBH         LINE#         31
-  C:23CBH         LINE#         33
-  C:23D5H         LINE#         34
-  C:23D5H         LINE#         35
-  C:23D7H         LINE#         36
-  C:23D9H         LINE#         38
-  C:23D9H         LINE#         39
-  C:23DBH         LINE#         40
-  C:23DDH         LINE#         41
-  C:23DFH         LINE#         42
+  C:2350H         LINE#         30
+  C:2350H         LINE#         31
+  C:2350H         LINE#         33
+  C:235AH         LINE#         34
+  C:235AH         LINE#         35
+  C:235CH         LINE#         36
+  C:235EH         LINE#         38
+  C:235EH         LINE#         39
+  C:2360H         LINE#         40
+  C:2362H         LINE#         41
+  C:2364H         LINE#         42
   -------         ENDPROC       _DELAY_10MS
   -------         PROC          DELAY10US
   -------         DO            
   D:0007H         SYMBOL        i
   -------         ENDDO         
-  C:2465H         LINE#         44
-  C:2465H         LINE#         45
-  C:2465H         LINE#         48
-  C:2466H         LINE#         49
-  C:2468H         LINE#         50
-  C:246AH         LINE#         51
+  C:23EAH         LINE#         44
+  C:23EAH         LINE#         45
+  C:23EAH         LINE#         48
+  C:23EBH         LINE#         49
+  C:23EDH         LINE#         50
+  C:23EFH         LINE#         51
   -------         ENDPROC       DELAY10US
   -------         PROC          DELAY20MS
   -------         DO            
@@ -534,22 +534,22 @@ SYMBOL TABLE OF MODULE:  .\Objects\hongjing2016 (MAIN)
   D:0006H         SYMBOL        j
   D:0005H         SYMBOL        k
   -------         ENDDO         
-  C:2438H         LINE#         53
-  C:2438H         LINE#         54
-  C:2438H         LINE#         57
-  C:2439H         LINE#         58
-  C:243AH         LINE#         59
-BL51 BANKED LINKER/LOCATER V6.22                                                      05/27/2016  11:49:31  PAGE 10
+  C:23BDH         LINE#         53
+  C:23BDH         LINE#         54
+  C:23BDH         LINE#         57
+  C:23BEH         LINE#         58
+  C:23BFH         LINE#         59
+BL51 BANKED LINKER/LOCATER V6.22                                                      05/27/2016  20:53:54  PAGE 10
 
 
-  C:243CH         LINE#         60
-  C:243EH         LINE#         61
-  C:2440H         LINE#         63
-  C:2440H         LINE#         65
-  C:2440H         LINE#         66
-  C:2442H         LINE#         67
-  C:2444H         LINE#         68
-  C:2446H         LINE#         69
+  C:23C1H         LINE#         60
+  C:23C3H         LINE#         61
+  C:23C5H         LINE#         63
+  C:23C5H         LINE#         65
+  C:23C5H         LINE#         66
+  C:23C7H         LINE#         67
+  C:23C9H         LINE#         68
+  C:23CBH         LINE#         69
   -------         ENDPROC       DELAY20MS
   -------         ENDMOD        DELAY
 
@@ -573,56 +573,45 @@ SYMBOL TABLE OF MODULE:  .\Objects\hongjing2016 (MAIN)
   B:0080H.5       PUBLIC        TRIG
   D:008EH         PUBLIC        AUXR
   B:0088H.7       PUBLIC        TF1
-  C:2447H         PUBLIC        InitTimer1
+  C:23CCH         PUBLIC        InitTimer1
   D:008DH         PUBLIC        TH1
-  C:1CE2H         PUBLIC        distance
+  C:1F20H         PUBLIC        distance
   D:008BH         PUBLIC        TL1
   B:0088H.6       PUBLIC        TR1
   D:00D0H         PUBLIC        PSW
   -------         PROC          INITTIMER1
-  C:2447H         LINE#         3
-  C:2447H         LINE#         4
-  C:2447H         LINE#         5
-  C:244AH         LINE#         6
-  C:244DH         LINE#         7
-  C:2450H         LINE#         8
-  C:2452H         LINE#         9
-  C:2454H         LINE#         10
+  C:23CCH         LINE#         3
+  C:23CCH         LINE#         4
+  C:23CCH         LINE#         5
+  C:23CFH         LINE#         6
+  C:23D2H         LINE#         7
+  C:23D5H         LINE#         8
+  C:23D7H         LINE#         9
+  C:23D9H         LINE#         10
   -------         ENDPROC       INITTIMER1
   -------         PROC          DISTANCE
   -------         DO            
-  X:00DAH         SYMBOL        distmp
-  X:00DEH         SYMBOL        tmp
-  X:00E0H         SYMBOL        overflow
+  X:00DAH         SYMBOL        distemp
   -------         ENDDO         
-  C:1CE2H         LINE#         12
-  C:1CE2H         LINE#         13
-  C:1CE2H         LINE#         14
-  C:1CECH         LINE#         15
-BL51 BANKED LINKER/LOCATER V6.22                                                      05/27/2016  11:49:31  PAGE 11
+  C:1F20H         LINE#         39
+  C:1F20H         LINE#         40
+  C:1F20H         LINE#         42
+  C:1F2AH         LINE#         45
+  C:1F2CH         LINE#         46
+  C:1F2FH         LINE#         47
+BL51 BANKED LINKER/LOCATER V6.22                                                      05/27/2016  20:53:54  PAGE 11
 
 
-  C:1CF7H         LINE#         16
-  C:1CF9H         LINE#         17
-  C:1CFBH         LINE#         18
-  C:1CFDH         LINE#         19
-  C:1D00H         LINE#         20
-  C:1D03H         LINE#         21
-  C:1D05H         LINE#         22
-  C:1D08H         LINE#         23
-  C:1D0AH         LINE#         24
-  C:1D0DH         LINE#         25
-  C:1D0DH         LINE#         26
-  C:1D17H         LINE#         27
-  C:1D27H         LINE#         28
-  C:1D31H         LINE#         29
-  C:1D31H         LINE#         30
-  C:1D3FH         LINE#         31
-  C:1D3FH         LINE#         32
-  C:1D41H         LINE#         33
-  C:1D43H         LINE#         34
-  C:1DB7H         LINE#         36
-  C:1DC5H         LINE#         37
+  C:1F32H         LINE#         48
+  C:1F34H         LINE#         49
+  C:1F37H         LINE#         50
+  C:1F39H         LINE#         52
+  C:1F3CH         LINE#         53
+  C:1F3EH         LINE#         56
+  C:1F75H         LINE#         59
+  C:1F78H         LINE#         60
+  C:1F7AH         LINE#         61
+  C:1F88H         LINE#         62
   -------         ENDPROC       DISTANCE
   -------         ENDMOD        INFRACSONIC
 
@@ -642,9 +631,9 @@ SYMBOL TABLE OF MODULE:  .\Objects\hongjing2016 (MAIN)
   D:00F8H         PUBLIC        P7
   X:0005H         PUBLIC        uart_rx
   D:00A8H         PUBLIC        IE
-  C:2227H         PUBLIC        _Uart1SendStr
+  C:21ACH         PUBLIC        _Uart1SendStr
   B:00A8H.4       PUBLIC        ES
-  C:225AH         PUBLIC        _Uart2SendStr
+  C:21DFH         PUBLIC        _Uart2SendStr
   D:00B8H         PUBLIC        IP
   D:00D8H         PUBLIC        CCON
   X:0069H         PUBLIC        uart_rx_cnt
@@ -659,128 +648,125 @@ SYMBOL TABLE OF MODULE:  .\Objects\hongjing2016 (MAIN)
   X:00D0H         PUBLIC        uart_rx_rp
   D:00D6H         PUBLIC        T2H
   X:00D2H         PUBLIC        uart_rx_wp
-BL51 BANKED LINKER/LOCATER V6.22                                                      05/27/2016  11:49:31  PAGE 12
-
-
   D:00D7H         PUBLIC        T2L
-  C:2455H         PUBLIC        _Uart1SendData
-  C:245DH         PUBLIC        _Uart2SendData
+  C:23DAH         PUBLIC        _Uart1SendData
+  C:23E2H         PUBLIC        _Uart2SendData
   X:00D4H         PUBLIC        uart2_rx_cnt
   D:009BH         PUBLIC        S2BUF
-  C:23E0H         PUBLIC        InitUart1
+  C:2365H         PUBLIC        InitUart1
   D:009AH         PUBLIC        S2CON
-  C:23F4H         PUBLIC        InitUart2
-  C:1DC6H         PUBLIC        _getkey
+  C:2379H         PUBLIC        InitUart2
+  C:1CE2H         PUBLIC        _getkey
   B:0021H.2       PUBLIC        busy1
   B:0021H.3       PUBLIC        isreceive2
+BL51 BANKED LINKER/LOCATER V6.22                                                      05/27/2016  20:53:54  PAGE 12
+
+
   B:0021H.4       PUBLIC        busy2
   D:00D0H         PUBLIC        PSW
-  C:2367H         PUBLIC        _putchar
+  C:22ECH         PUBLIC        _putchar
   -------         PROC          INITUART1
-  C:23E0H         LINE#         18
-  C:23E0H         LINE#         19
-  C:23E0H         LINE#         21
-  C:23E3H         LINE#         27
-  C:23E6H         LINE#         28
-  C:23E9H         LINE#         29
-  C:23ECH         LINE#         30
-  C:23EFH         LINE#         31
-  C:23F1H         LINE#         32
-  C:23F3H         LINE#         33
+  C:2365H         LINE#         18
+  C:2365H         LINE#         19
+  C:2365H         LINE#         21
+  C:2368H         LINE#         27
+  C:236BH         LINE#         28
+  C:236EH         LINE#         29
+  C:2371H         LINE#         30
+  C:2374H         LINE#         31
+  C:2376H         LINE#         32
+  C:2378H         LINE#         33
   -------         ENDPROC       INITUART1
   -------         PROC          INITUART2
-  C:23F4H         LINE#         34
-  C:23F4H         LINE#         35
-  C:23F4H         LINE#         37
-  C:23F7H         LINE#         43
-  C:23FAH         LINE#         44
-  C:23FDH         LINE#         45
-  C:2400H         LINE#         46
-  C:2403H         LINE#         47
-  C:2405H         LINE#         48
+  C:2379H         LINE#         34
+  C:2379H         LINE#         35
+  C:2379H         LINE#         37
+  C:237CH         LINE#         43
+  C:237FH         LINE#         44
+  C:2382H         LINE#         45
+  C:2385H         LINE#         46
+  C:2388H         LINE#         47
+  C:238AH         LINE#         48
   -------         ENDPROC       INITUART2
   -------         PROC          _UART1SENDDATA
   D:0007H         SYMBOL        dat
-  C:2455H         LINE#         49
-  C:2455H         LINE#         50
-  C:2455H         LINE#         51
-  C:2458H         LINE#         73
-  C:245AH         LINE#         74
-  C:245CH         LINE#         75
+  C:23DAH         LINE#         49
+  C:23DAH         LINE#         50
+  C:23DAH         LINE#         51
+  C:23DDH         LINE#         73
+  C:23DFH         LINE#         74
+  C:23E1H         LINE#         75
   -------         ENDPROC       _UART1SENDDATA
   -------         PROC          _UART2SENDDATA
   D:0007H         SYMBOL        dat
-  C:245DH         LINE#         76
-  C:245DH         LINE#         77
-  C:245DH         LINE#         78
-  C:2460H         LINE#         100
-  C:2462H         LINE#         101
-  C:2464H         LINE#         102
+  C:23E2H         LINE#         76
+  C:23E2H         LINE#         77
+  C:23E2H         LINE#         78
+  C:23E5H         LINE#         100
+  C:23E7H         LINE#         101
+  C:23E9H         LINE#         102
   -------         ENDPROC       _UART2SENDDATA
   -------         PROC          _PUTCHAR
   D:0006H         SYMBOL        dat
-BL51 BANKED LINKER/LOCATER V6.22                                                      05/27/2016  11:49:31  PAGE 13
-
-
-  C:2367H         LINE#         103
-  C:2369H         LINE#         104
-  C:2369H         LINE#         105
-  C:2370H         LINE#         106
-  C:2373H         LINE#         107
-  C:237AH         LINE#         108
-  C:237FH         LINE#         109
-  C:2381H         LINE#         110
+  C:22ECH         LINE#         103
+  C:22EEH         LINE#         104
+  C:22EEH         LINE#         105
+  C:22F5H         LINE#         106
+  C:22F8H         LINE#         107
+  C:22FFH         LINE#         108
+  C:2304H         LINE#         109
+  C:2306H         LINE#         110
   -------         ENDPROC       _PUTCHAR
   -------         PROC          _GETKEY
   -------         DO            
+BL51 BANKED LINKER/LOCATER V6.22                                                      05/27/2016  20:53:54  PAGE 13
+
+
   D:0003H         SYMBOL        ch
   -------         ENDDO         
-  C:1DC6H         LINE#         111
-  C:1DC6H         LINE#         112
-  C:1DC6H         LINE#         115
-  C:1DCEH         LINE#         116
-  C:1DD8H         LINE#         117
-  C:1DDAH         LINE#         118
-  C:1DEDH         LINE#         119
-  C:1E03H         LINE#         120
-  C:1E11H         LINE#         121
-  C:1E13H         LINE#         122
-  C:1E16H         LINE#         123
-  C:1E16H         LINE#         125
-  C:1E16H         LINE#         126
-  C:1E20H         LINE#         127
-  C:1E23H         LINE#         128
-  C:1E36H         LINE#         129
-  C:1E4CH         LINE#         130
-  C:1E5AH         LINE#         131
-  C:1E5DH         LINE#         132
-  C:1E5FH         LINE#         133
-  C:1E5FH         LINE#         134
+  C:1CE2H         LINE#         111
+  C:1CE2H         LINE#         112
+  C:1CE2H         LINE#         115
+  C:1CEAH         LINE#         116
+  C:1CF4H         LINE#         117
+  C:1CF6H         LINE#         118
+  C:1D09H         LINE#         119
+  C:1D1FH         LINE#         120
+  C:1D2DH         LINE#         121
+  C:1D2FH         LINE#         122
+  C:1D32H         LINE#         123
+  C:1D32H         LINE#         125
+  C:1D32H         LINE#         126
+  C:1D3CH         LINE#         127
+  C:1D3FH         LINE#         128
+  C:1D52H         LINE#         129
+  C:1D68H         LINE#         130
+  C:1D76H         LINE#         131
+  C:1D79H         LINE#         132
+  C:1D7BH         LINE#         133
+  C:1D7BH         LINE#         134
   -------         ENDPROC       _GETKEY
   -------         PROC          _UART1SENDSTR
   X:0129H         SYMBOL        str
-  C:2227H         LINE#         135
-  C:2232H         LINE#         136
-  C:2232H         LINE#         137
-  C:2242H         LINE#         138
-  C:2242H         LINE#         139
-  C:2257H         LINE#         140
-  C:2259H         LINE#         141
+  C:21ACH         LINE#         135
+  C:21B7H         LINE#         136
+  C:21B7H         LINE#         137
+  C:21C7H         LINE#         138
+  C:21C7H         LINE#         139
+  C:21DCH         LINE#         140
+  C:21DEH         LINE#         141
   -------         ENDPROC       _UART1SENDSTR
   -------         PROC          _UART2SENDSTR
   X:012CH         SYMBOL        str
-  C:225AH         LINE#         142
-  C:2265H         LINE#         143
-  C:2265H         LINE#         144
-  C:2275H         LINE#         145
-  C:2275H         LINE#         146
-  C:228AH         LINE#         147
-  C:228CH         LINE#         148
+  C:21DFH         LINE#         142
+  C:21EAH         LINE#         143
+  C:21EAH         LINE#         144
+  C:21FAH         LINE#         145
+  C:21FAH         LINE#         146
+  C:220FH         LINE#         147
+  C:2211H         LINE#         148
   -------         ENDPROC       _UART2SENDSTR
   -------         ENDMOD        UART
-
-BL51 BANKED LINKER/LOCATER V6.22                                                      05/27/2016  11:49:31  PAGE 14
-
 
   -------         MODULE        DHT11
   C:0000H         SYMBOL        _ICE_DUMMY_
@@ -793,105 +779,108 @@ SYMBOL TABLE OF MODULE:  .\Objects\hongjing2016 (MAIN)
   D:00E8H         PUBLIC        P6
   D:00F8H         PUBLIC        P7
   D:00A8H         PUBLIC        IE
+BL51 BANKED LINKER/LOCATER V6.22                                                      05/27/2016  20:53:54  PAGE 14
+
+
   D:00B8H         PUBLIC        IP
   D:00D8H         PUBLIC        CCON
   D:0098H         PUBLIC        SCON
-  C:2428H         PUBLIC        DHT11_Start
+  C:23ADH         PUBLIC        DHT11_Start
   D:0088H         PUBLIC        TCON
-  C:246BH         SYMBOL        _?ix1000
-  C:1E60H         PUBLIC        Rec_DHT
-  C:206AH         PUBLIC        receive_data
+  C:23F0H         SYMBOL        _?ix1000
+  C:1D7CH         PUBLIC        Rec_DHT
+  C:1FEFH         PUBLIC        receive_data
   B:0090H.3       PUBLIC        DHTIO
   D:00D0H         PUBLIC        PSW
   -------         PROC          DHT11_START
-  C:2428H         LINE#         4
-  C:2428H         LINE#         5
-  C:2428H         LINE#         8
-  C:242AH         LINE#         9
-  C:242DH         LINE#         10
-  C:242FH         LINE#         11
-  C:2432H         LINE#         12
-  C:2435H         LINE#         13
+  C:23ADH         LINE#         4
+  C:23ADH         LINE#         5
+  C:23ADH         LINE#         8
+  C:23AFH         LINE#         9
+  C:23B2H         LINE#         10
+  C:23B4H         LINE#         11
+  C:23B7H         LINE#         12
+  C:23BAH         LINE#         13
   -------         ENDPROC       DHT11_START
   -------         PROC          RECEIVE_DATA
   -------         DO            
   X:00E6H         SYMBOL        i
   X:00E7H         SYMBOL        temp
   -------         ENDDO         
-  C:206AH         LINE#         16
-  C:206AH         LINE#         17
-  C:206AH         LINE#         19
-  C:206FH         LINE#         20
-  C:2073H         LINE#         21
-  C:2073H         LINE#         22
-  C:207BH         LINE#         23
-  C:207EH         LINE#         24
-  C:2081H         LINE#         25
-  C:2084H         LINE#         26
-  C:2087H         LINE#         27
-  C:208AH         LINE#         28
-  C:208DH         LINE#         29
-  C:2094H         LINE#         30
-  C:2094H         LINE#         31
-  C:2097H         LINE#         32
-  C:209AH         LINE#         33
-  C:209DH         LINE#         34
-  C:20A0H         LINE#         35
-  C:20A3H         LINE#         36
-  C:20A5H         LINE#         38
-BL51 BANKED LINKER/LOCATER V6.22                                                      05/27/2016  11:49:31  PAGE 15
-
-
-  C:20A5H         LINE#         39
-  C:20A8H         LINE#         40
-  C:20A8H         LINE#         41
-  C:20B4H         LINE#         42
-  C:20B9H         LINE#         43
+  C:1FEFH         LINE#         16
+  C:1FEFH         LINE#         17
+  C:1FEFH         LINE#         19
+  C:1FF4H         LINE#         20
+  C:1FF8H         LINE#         21
+  C:1FF8H         LINE#         22
+  C:2000H         LINE#         23
+  C:2003H         LINE#         24
+  C:2006H         LINE#         25
+  C:2009H         LINE#         26
+  C:200CH         LINE#         27
+  C:200FH         LINE#         28
+  C:2012H         LINE#         29
+  C:2019H         LINE#         30
+  C:2019H         LINE#         31
+  C:201CH         LINE#         32
+  C:201FH         LINE#         33
+  C:2022H         LINE#         34
+  C:2025H         LINE#         35
+  C:2028H         LINE#         36
+  C:202AH         LINE#         38
+  C:202AH         LINE#         39
+  C:202DH         LINE#         40
+  C:202DH         LINE#         41
+  C:2039H         LINE#         42
+  C:203EH         LINE#         43
   -------         ENDPROC       RECEIVE_DATA
   -------         PROC          REC_DHT
   -------         DO            
   X:00DAH         SYMBOL        Check
   X:00DBH         SYMBOL        Tem_Z
   X:00DCH         SYMBOL        Tem_X
+BL51 BANKED LINKER/LOCATER V6.22                                                      05/27/2016  20:53:54  PAGE 15
+
+
   X:00DDH         SYMBOL        Hum_Z
   X:00DEH         SYMBOL        Hum_X
   X:00DFH         SYMBOL        sum
   X:00E1H         SYMBOL        t_h
   X:00E5H         SYMBOL        flag
   -------         ENDDO         
-  C:1E60H         LINE#         71
-  C:1E60H         LINE#         72
-  C:1E60H         LINE#         75
-  C:1E73H         LINE#         77
-  C:1E76H         LINE#         78
-  C:1E78H         LINE#         79
-  C:1E7BH         LINE#         80
-  C:1E7EH         LINE#         81
-  C:1E7EH         LINE#         82
-  C:1E81H         LINE#         84
-  C:1E84H         LINE#         86
-  C:1E8CH         LINE#         87
-  C:1E94H         LINE#         88
-  C:1E9CH         LINE#         89
-  C:1EA4H         LINE#         90
-  C:1EACH         LINE#         91
-  C:1EAEH         LINE#         93
-  C:1ED5H         LINE#         96
-  C:1ED5H         LINE#         97
-  C:1ED5H         LINE#         98
-  C:1ED8H         LINE#         99
-  C:1EDBH         LINE#         100
-  C:1EDEH         LINE#         101
-  C:1EE6H         LINE#         102
-  C:1EE6H         LINE#         103
-  C:1EE6H         LINE#         104
-  C:1EECH         LINE#         105
+  C:1D7CH         LINE#         71
+  C:1D7CH         LINE#         72
+  C:1D7CH         LINE#         75
+  C:1D8FH         LINE#         77
+  C:1D92H         LINE#         78
+  C:1D94H         LINE#         79
+  C:1D97H         LINE#         80
+  C:1D9AH         LINE#         81
+  C:1D9AH         LINE#         82
+  C:1D9DH         LINE#         84
+  C:1DA0H         LINE#         86
+  C:1DA8H         LINE#         87
+  C:1DB0H         LINE#         88
+  C:1DB8H         LINE#         89
+  C:1DC0H         LINE#         90
+  C:1DC8H         LINE#         91
+  C:1DCAH         LINE#         93
+  C:1DF1H         LINE#         96
+  C:1DF1H         LINE#         97
+  C:1DF1H         LINE#         98
+  C:1DF4H         LINE#         99
+  C:1DF7H         LINE#         100
+  C:1DFAH         LINE#         101
+  C:1E02H         LINE#         102
+  C:1E02H         LINE#         103
+  C:1E02H         LINE#         104
+  C:1E08H         LINE#         105
   -------         ENDPROC       REC_DHT
   -------         ENDMOD        DHT11
 
   -------         MODULE        NOKIA5110
   C:0000H         SYMBOL        _ICE_DUMMY_
-  C:22C0H         PUBLIC        _lcdWriteStr
+  C:2245H         PUBLIC        _lcdWriteStr
   D:0080H         PUBLIC        P0
   D:0090H         PUBLIC        P1
   D:00A0H         PUBLIC        P2
@@ -899,155 +888,155 @@ SYMBOL TABLE OF MODULE:  .\Objects\hongjing2016 (MAIN)
   D:00C0H         PUBLIC        P4
   D:00C8H         PUBLIC        P5
   D:00E8H         PUBLIC        P6
-BL51 BANKED LINKER/LOCATER V6.22                                                      05/27/2016  11:49:31  PAGE 16
-
-
   B:0080H.2       PUBLIC        DC
   D:00F8H         PUBLIC        P7
-  C:2004H         PUBLIC        _lcdWriteChinese
+  C:1F89H         PUBLIC        _lcdWriteChinese
   B:0080H.1       PUBLIC        CE
   D:00A8H         PUBLIC        IE
-  C:2293H         PUBLIC        _lcdWriteChar6_8
-  C:2406H         PUBLIC        _lcdSetXY
+  C:2218H         PUBLIC        _lcdWriteChar6_8
+  C:238BH         PUBLIC        _lcdSetXY
   C:0930H         SYMBOL        ASCII_6_8
   D:00B8H         PUBLIC        IP
   X:010AH         PUBLIC        index
-  C:2345H         PUBLIC        lcdClear
+  C:22CAH         PUBLIC        lcdClear
+BL51 BANKED LINKER/LOCATER V6.22                                                      05/27/2016  20:53:54  PAGE 16
+
+
   D:00D8H         PUBLIC        CCON
   C:0CD4H         PUBLIC        characters
-  C:2382H         PUBLIC        _lcdPutStr
+  C:2307H         PUBLIC        _lcdPutStr
   C:0B70H         SYMBOL        sign
   D:0098H         PUBLIC        SCON
   D:0088H         PUBLIC        TCON
   C:1A55H         PUBLIC        _lcdShowDouble
-  C:21C1H         PUBLIC        _lcdDC
-  C:1F79H         PUBLIC        _lcdWriteChineseStr
-  C:2321H         PUBLIC        _lcdWriteChar
-  C:21ECH         PUBLIC        _lcdClearAny
+  C:2146H         PUBLIC        _lcdDC
+  C:1E95H         PUBLIC        _lcdWriteChineseStr
+  C:22A6H         PUBLIC        _lcdWriteChar
+  C:2171H         PUBLIC        _lcdClearAny
   C:0BF4H         SYMBOL        Shandongdaxue
   C:0D22H         PUBLIC        characters16_16
   X:0114H         PUBLIC        str
   B:0080H.4       PUBLIC        CLK
   B:0080H.3       PUBLIC        DIN
-  C:2158H         PUBLIC        Init5110
+  C:20DDH         PUBLIC        Init5110
   C:0C74H         SYMBOL        Hongjingbei
   C:0006H         PUBLIC        _lcdPutChar
-  C:22F3H         PUBLIC        _lcdWriteChar16_16
+  C:2278H         PUBLIC        _lcdWriteChar16_16
   B:0080H.0       PUBLIC        RST
   D:00D0H         PUBLIC        PSW
-  C:21BAH         SYMBOL        L?0081
+  C:213FH         SYMBOL        L?0081
   -------         PROC          L?0080
   -------         ENDPROC       L?0080
-  C:21BAH         SYMBOL        L?0081
+  C:213FH         SYMBOL        L?0081
   -------         PROC          _LCDDC
   D:0007H         SYMBOL        dt
   D:0005H         SYMBOL        command
   -------         DO            
   D:0006H         SYMBOL        i
   -------         ENDDO         
-  C:21C1H         LINE#         45
-  C:21C1H         LINE#         46
-  C:21C1H         LINE#         47
-  C:21C3H         LINE#         48
-  C:21C5H         LINE#         49
-  C:21C8H         LINE#         50
-  C:21CCH         LINE#         51
-  C:21CEH         LINE#         52
-  C:21D4H         LINE#         53
-  C:21D4H         LINE#         54
-  C:21D8H         LINE#         55
-  C:21DCH         LINE#         57
-  C:21DEH         LINE#         58
-  C:21E0H         LINE#         59
-BL51 BANKED LINKER/LOCATER V6.22                                                      05/27/2016  11:49:31  PAGE 17
-
-
-  C:21E4H         LINE#         60
-  C:21E6H         LINE#         61
-  C:21E9H         LINE#         62
-  C:21EBH         LINE#         63
+  C:2146H         LINE#         45
+  C:2146H         LINE#         46
+  C:2146H         LINE#         47
+  C:2148H         LINE#         48
+  C:214AH         LINE#         49
+  C:214DH         LINE#         50
+  C:2151H         LINE#         51
+  C:2153H         LINE#         52
+  C:2159H         LINE#         53
+  C:2159H         LINE#         54
+  C:215DH         LINE#         55
+  C:2161H         LINE#         57
+  C:2163H         LINE#         58
+  C:2165H         LINE#         59
+  C:2169H         LINE#         60
+  C:216BH         LINE#         61
+  C:216EH         LINE#         62
+  C:2170H         LINE#         63
   -------         ENDPROC       _LCDDC
   -------         PROC          LCDCLEAR
   -------         DO            
   D:0004H         SYMBOL        t
   D:0003H         SYMBOL        k
   -------         ENDDO         
-  C:2345H         LINE#         64
-  C:2345H         LINE#         65
-  C:2345H         LINE#         66
-  C:2348H         LINE#         67
-  C:234EH         LINE#         68
-  C:2353H         LINE#         69
-  C:2353H         LINE#         70
-  C:2353H         LINE#         71
-  C:2355H         LINE#         72
-  C:2355H         LINE#         73
-  C:235CH         LINE#         74
-  C:2361H         LINE#         75
-  C:2366H         LINE#         76
+  C:22CAH         LINE#         64
+BL51 BANKED LINKER/LOCATER V6.22                                                      05/27/2016  20:53:54  PAGE 17
+
+
+  C:22CAH         LINE#         65
+  C:22CAH         LINE#         66
+  C:22CDH         LINE#         67
+  C:22D3H         LINE#         68
+  C:22D8H         LINE#         69
+  C:22D8H         LINE#         70
+  C:22D8H         LINE#         71
+  C:22DAH         LINE#         72
+  C:22DAH         LINE#         73
+  C:22E1H         LINE#         74
+  C:22E6H         LINE#         75
+  C:22EBH         LINE#         76
   -------         ENDPROC       LCDCLEAR
   -------         PROC          INIT5110
-  C:2158H         LINE#         77
-  C:2158H         LINE#         78
-  C:2158H         LINE#         79
-  C:215AH         LINE#         80
-  C:2161H         LINE#         81
-  C:2163H         LINE#         82
-  C:2165H         LINE#         83
-  C:216CH         LINE#         84
-  C:216EH         LINE#         85
-  C:2175H         LINE#         86
-  C:217CH         LINE#         87
-  C:2181H         LINE#         88
-  C:2186H         LINE#         89
-  C:218BH         LINE#         90
-  C:2190H         LINE#         91
-  C:2193H         LINE#         92
-  C:219AH         LINE#         93
-  C:219CH         LINE#         94
+  C:20DDH         LINE#         77
+  C:20DDH         LINE#         78
+  C:20DDH         LINE#         79
+  C:20DFH         LINE#         80
+  C:20E6H         LINE#         81
+  C:20E8H         LINE#         82
+  C:20EAH         LINE#         83
+  C:20F1H         LINE#         84
+  C:20F3H         LINE#         85
+  C:20FAH         LINE#         86
+  C:2101H         LINE#         87
+  C:2106H         LINE#         88
+  C:210BH         LINE#         89
+  C:2110H         LINE#         90
+  C:2115H         LINE#         91
+  C:2118H         LINE#         92
+  C:211FH         LINE#         93
+  C:2121H         LINE#         94
   -------         ENDPROC       INIT5110
   -------         PROC          _LCDSETXY
   D:0004H         SYMBOL        X
   D:0005H         SYMBOL        Y
-  C:2406H         LINE#         96
-  C:2408H         LINE#         97
-  C:2408H         LINE#         98
-  C:2411H         LINE#         99
+  C:238BH         LINE#         96
+  C:238DH         LINE#         97
+  C:238DH         LINE#         98
+  C:2396H         LINE#         99
   -------         ENDPROC       _LCDSETXY
-  C:228DH         SYMBOL        L?0083
+  C:2212H         SYMBOL        L?0083
   -------         PROC          L?0082
   -------         ENDPROC       L?0082
-  C:228DH         SYMBOL        L?0083
+  C:2212H         SYMBOL        L?0083
   -------         PROC          _LCDWRITECHAR6_8
-BL51 BANKED LINKER/LOCATER V6.22                                                      05/27/2016  11:49:31  PAGE 18
-
-
   D:0007H         SYMBOL        row
   D:0005H         SYMBOL        page
   D:0003H         SYMBOL        character
   -------         DO            
   D:0004H         SYMBOL        i
   -------         ENDDO         
-  C:2293H         LINE#         101
-  C:2293H         LINE#         102
-  C:2293H         LINE#         103
-  C:2295H         LINE#         104
-  C:229EH         LINE#         105
-  C:22A0H         LINE#         106
-  C:22A0H         LINE#         107
-  C:22BAH         LINE#         108
-  C:22BFH         LINE#         109
+  C:2218H         LINE#         101
+  C:2218H         LINE#         102
+  C:2218H         LINE#         103
+  C:221AH         LINE#         104
+  C:2223H         LINE#         105
+BL51 BANKED LINKER/LOCATER V6.22                                                      05/27/2016  20:53:54  PAGE 18
+
+
+  C:2225H         LINE#         106
+  C:2225H         LINE#         107
+  C:223FH         LINE#         108
+  C:2244H         LINE#         109
   -------         ENDPROC       _LCDWRITECHAR6_8
   -------         PROC          _LCDWRITECHAR
   D:0004H         SYMBOL        value
   -------         DO            
   D:0003H         SYMBOL        i
   -------         ENDDO         
-  C:2321H         LINE#         112
-  C:2323H         LINE#         113
-  C:2323H         LINE#         115
-  C:2325H         LINE#         116
-  C:2344H         LINE#         117
+  C:22A6H         LINE#         112
+  C:22A8H         LINE#         113
+  C:22A8H         LINE#         115
+  C:22AAH         LINE#         116
+  C:22C9H         LINE#         117
   -------         ENDPROC       _LCDWRITECHAR
   -------         PROC          _LCDPUTCHAR
   D:0002H         SYMBOL        value
@@ -1061,27 +1050,24 @@ SYMBOL TABLE OF MODULE:  .\Objects\hongjing2016 (MAIN)
   -------         ENDPROC       _LCDPUTCHAR
   -------         PROC          _LCDWRITESTR
   X:00DFH         SYMBOL        str
-  C:22C0H         LINE#         126
-  C:22CBH         LINE#         127
-  C:22CBH         LINE#         128
-  C:22DBH         LINE#         129
-  C:22DBH         LINE#         130
-  C:22F0H         LINE#         131
-  C:22F2H         LINE#         132
+  C:2245H         LINE#         126
+  C:2250H         LINE#         127
+  C:2250H         LINE#         128
+  C:2260H         LINE#         129
+  C:2260H         LINE#         130
+  C:2275H         LINE#         131
+  C:2277H         LINE#         132
   -------         ENDPROC       _LCDWRITESTR
   -------         PROC          _LCDPUTSTR
   D:0001H         SYMBOL        str
   D:0005H         SYMBOL        x
   X:00DEH         SYMBOL        y
-  C:2382H         LINE#         134
-  C:2382H         LINE#         135
-  C:2382H         LINE#         136
-  C:238AH         LINE#         137
-  C:2398H         LINE#         138
+  C:2307H         LINE#         134
+  C:2307H         LINE#         135
+  C:2307H         LINE#         136
+  C:230FH         LINE#         137
+  C:231DH         LINE#         138
   -------         ENDPROC       _LCDPUTSTR
-BL51 BANKED LINKER/LOCATER V6.22                                                      05/27/2016  11:49:31  PAGE 19
-
-
   -------         PROC          _LCDWRITECHAR16_16
   D:0001H         SYMBOL        row
   D:0002H         SYMBOL        page
@@ -1089,16 +1075,19 @@ SYMBOL TABLE OF MODULE:  .\Objects\hongjing2016 (MAIN)
   -------         DO            
   D:0004H         SYMBOL        i
   -------         ENDDO         
-  C:22F3H         LINE#         141
-  C:22F7H         LINE#         142
-  C:22F7H         LINE#         143
-  C:22F9H         LINE#         144
-  C:2301H         LINE#         145
-  C:2303H         LINE#         146
-  C:230BH         LINE#         147
-  C:2316H         LINE#         148
-  C:2318H         LINE#         149
-  C:2320H         LINE#         150
+  C:2278H         LINE#         141
+  C:227CH         LINE#         142
+  C:227CH         LINE#         143
+  C:227EH         LINE#         144
+BL51 BANKED LINKER/LOCATER V6.22                                                      05/27/2016  20:53:54  PAGE 19
+
+
+  C:2286H         LINE#         145
+  C:2288H         LINE#         146
+  C:2290H         LINE#         147
+  C:229BH         LINE#         148
+  C:229DH         LINE#         149
+  C:22A5H         LINE#         150
   -------         ENDPROC       _LCDWRITECHAR16_16
   -------         PROC          _LCDCLEARANY
   D:0006H         SYMBOL        page
@@ -1107,12 +1096,12 @@ SYMBOL TABLE OF MODULE:  .\Objects\hongjing2016 (MAIN)
   -------         DO            
   D:0003H         SYMBOL        i
   -------         ENDDO         
-  C:21ECH         LINE#         151
-  C:21F2H         LINE#         152
-  C:21F2H         LINE#         154
-  C:21FDH         LINE#         155
-  C:221CH         LINE#         156
-  C:2226H         LINE#         157
+  C:2171H         LINE#         151
+  C:2177H         LINE#         152
+  C:2177H         LINE#         154
+  C:2182H         LINE#         155
+  C:21A1H         LINE#         156
+  C:21ABH         LINE#         157
   -------         ENDPROC       _LCDCLEARANY
   -------         PROC          _LCDSHOWDOUBLE
   X:00DAH         SYMBOL        page
@@ -1139,9 +1128,6 @@ SYMBOL TABLE OF MODULE:  .\Objects\hongjing2016 (MAIN)
   C:1AB2H         LINE#         165
   C:1AB8H         LINE#         166
   C:1AC9H         LINE#         167
-BL51 BANKED LINKER/LOCATER V6.22                                                      05/27/2016  11:49:31  PAGE 20
-
-
   C:1AD3H         LINE#         168
   C:1ADEH         LINE#         169
   C:1AE9H         LINE#         170
@@ -1153,6 +1139,9 @@ SYMBOL TABLE OF MODULE:  .\Objects\hongjing2016 (MAIN)
   C:1B32H         LINE#         176
   C:1B36H         LINE#         177
   C:1B53H         LINE#         178
+BL51 BANKED LINKER/LOCATER V6.22                                                      05/27/2016  20:53:54  PAGE 20
+
+
   C:1B55H         LINE#         179
   C:1B7BH         LINE#         180
   C:1BA2H         LINE#         181
@@ -1183,15 +1172,15 @@ SYMBOL TABLE OF MODULE:  .\Objects\hongjing2016 (MAIN)
   -------         DO            
   D:0004H         SYMBOL        i
   -------         ENDDO         
-  C:2004H         LINE#         204
-  C:2013H         LINE#         205
-  C:2013H         LINE#         208
-  C:201BH         LINE#         209
-  C:201DH         LINE#         210
-  C:203BH         LINE#         212
-  C:2049H         LINE#         213
-  C:204BH         LINE#         214
-  C:2069H         LINE#         215
+  C:1F89H         LINE#         204
+  C:1F98H         LINE#         205
+  C:1F98H         LINE#         208
+  C:1FA0H         LINE#         209
+  C:1FA2H         LINE#         210
+  C:1FC0H         LINE#         212
+  C:1FCEH         LINE#         213
+  C:1FD0H         LINE#         214
+  C:1FEEH         LINE#         215
   -------         ENDPROC       _LCDWRITECHINESE
   -------         PROC          _LCDWRITECHINESESTR
   X:00DAH         SYMBOL        Hanzi
@@ -1199,79 +1188,79 @@ SYMBOL TABLE OF MODULE:  .\Objects\hongjing2016 (MAIN)
   X:00DEH         SYMBOL        y
   X:00DFH         SYMBOL        num
   -------         DO            
-BL51 BANKED LINKER/LOCATER V6.22                                                      05/27/2016  11:49:31  PAGE 21
-
-
   X:00E0H         SYMBOL        num_i
   X:00E1H         SYMBOL        i
   -------         ENDDO         
-  C:1F79H         LINE#         217
-  C:1F87H         LINE#         218
-  C:1F87H         LINE#         219
-  C:1F8CH         LINE#         220
-  C:1F9CH         LINE#         221
-  C:1F9CH         LINE#         223
-  C:1FB9H         LINE#         224
-  C:1FB9H         LINE#         225
-  C:1FBBH         LINE#         226
-  C:1FBFH         LINE#         227
-  C:1FC5H         LINE#         228
-  C:1FC5H         LINE#         230
-  C:1FF5H         LINE#         231
-  C:1FFBH         LINE#         232
-  C:2003H         LINE#         233
+  C:1E95H         LINE#         217
+  C:1EA3H         LINE#         218
+  C:1EA3H         LINE#         219
+  C:1EA8H         LINE#         220
+  C:1EB8H         LINE#         221
+  C:1EB8H         LINE#         223
+  C:1ED5H         LINE#         224
+  C:1ED5H         LINE#         225
+BL51 BANKED LINKER/LOCATER V6.22                                                      05/27/2016  20:53:54  PAGE 21
+
+
+  C:1ED7H         LINE#         226
+  C:1EDBH         LINE#         227
+  C:1EE1H         LINE#         228
+  C:1EE1H         LINE#         230
+  C:1F11H         LINE#         231
+  C:1F17H         LINE#         232
+  C:1F1FH         LINE#         233
   -------         ENDPROC       _LCDWRITECHINESESTR
   -------         ENDMOD        NOKIA5110
 
-  -------         MODULE        ?C?FPADD
-  C:002DH         PUBLIC        ?C?FPADD
-  C:0029H         PUBLIC        ?C?FPSUB
-  -------         ENDMOD        ?C?FPADD
-
   -------         MODULE        ?C?FPMUL
-  C:011EH         PUBLIC        ?C?FPMUL
+  C:0026H         PUBLIC        ?C?FPMUL
   -------         ENDMOD        ?C?FPMUL
 
   -------         MODULE        ?C?FPDIV
-  C:0227H         PUBLIC        ?C?FPDIV
+  C:012FH         PUBLIC        ?C?FPDIV
   -------         ENDMOD        ?C?FPDIV
 
   -------         MODULE        ?C?FPCMP
-  C:02C6H         PUBLIC        ?C?FPCMP
-  C:02C4H         PUBLIC        ?C?FPCMP3
+  C:01CEH         PUBLIC        ?C?FPCMP
+  C:01CCH         PUBLIC        ?C?FPCMP3
   -------         ENDMOD        ?C?FPCMP
 
   -------         MODULE        ?C?FPNEG
-  C:033DH         PUBLIC        ?C?FPNEG
+  C:0245H         PUBLIC        ?C?FPNEG
   -------         ENDMOD        ?C?FPNEG
 
   -------         MODULE        ?C?FCAST
-  C:0358H         PUBLIC        ?C?FCASTC
-  C:0353H         PUBLIC        ?C?FCASTI
-  C:034EH         PUBLIC        ?C?FCASTL
+  C:0260H         PUBLIC        ?C?FCASTC
+  C:025BH         PUBLIC        ?C?FCASTI
+  C:0256H         PUBLIC        ?C?FCASTL
   -------         ENDMOD        ?C?FCAST
 
   -------         MODULE        ?C?CASTF
-  C:038CH         PUBLIC        ?C?CASTF
+  C:0294H         PUBLIC        ?C?CASTF
   -------         ENDMOD        ?C?CASTF
 
   -------         MODULE        PRINTF
   X:00DAH         PUBLIC        ?_PRINTF?BYTE
   X:00DAH         PUBLIC        ?_SPRINTF?BYTE
   C:0ECDH         PUBLIC        _PRINTF
-BL51 BANKED LINKER/LOCATER V6.22                                                      05/27/2016  11:49:31  PAGE 22
-
-
   C:0EC7H         PUBLIC        _SPRINTF
   -------         ENDMOD        PRINTF
 
   -------         MODULE        ?C?FPROUND
-  C:040DH         PUBLIC        ?C?FPROUND
+  C:0315H         PUBLIC        ?C?FPROUND
   -------         ENDMOD        ?C?FPROUND
 
   -------         MODULE        ?C?FPCONVERT
-  C:044AH         PUBLIC        ?C?FPCONVERT
+  C:0352H         PUBLIC        ?C?FPCONVERT
   -------         ENDMOD        ?C?FPCONVERT
+
+  -------         MODULE        ?C?FPADD
+  C:045EH         PUBLIC        ?C?FPADD
+  C:045AH         PUBLIC        ?C?FPSUB
+  -------         ENDMOD        ?C?FPADD
+
+BL51 BANKED LINKER/LOCATER V6.22                                                      05/27/2016  20:53:54  PAGE 22
+
 
   -------         MODULE        ?C?FTNPWR
   C:057FH         PUBLIC        ?C?FTNPWR
@@ -1319,9 +1308,6 @@ SYMBOL TABLE OF MODULE:  .\Objects\hongjing2016 (MAIN)
 
   -------         MODULE        ?C?LSTXDATA
   C:0858H         PUBLIC        ?C?LSTXDATA
-BL51 BANKED LINKER/LOCATER V6.22                                                      05/27/2016  11:49:31  PAGE 23
-
-
   -------         ENDMOD        ?C?LSTXDATA
 
   -------         MODULE        ?C?LSTKXDATA
@@ -1333,6 +1319,9 @@ SYMBOL TABLE OF MODULE:  .\Objects\hongjing2016 (MAIN)
   -------         ENDMOD        ?C?PLDIXDATA
 
   -------         MODULE        ?C?PSTXDATA
+BL51 BANKED LINKER/LOCATER V6.22                                                      05/27/2016  20:53:54  PAGE 23
+
+
   C:08ACH         PUBLIC        ?C?PSTXDATA
   -------         ENDMOD        ?C?PSTXDATA
 
@@ -1368,5 +1357,5 @@ SYMBOL TABLE OF MODULE:  .\Objects\hongjing2016 (MAIN)
 *** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
     SEGMENT: ?PR?_LCDWRITECHAR16_16?NOKIA5110
 
-Program Size: data=23.7 xdata=303 code=9326
+Program Size: data=23.7 xdata=303 code=9203
 LINK/LOCATE RUN COMPLETE.  8 WARNING(S),  0 ERROR(S)

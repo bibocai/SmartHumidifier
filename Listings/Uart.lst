@@ -1,4 +1,4 @@
-C51 COMPILER V9.55   UART                                                                  05/27/2016 11:03:59 PAGE 1   
+C51 COMPILER V9.55   UART                                                                  05/27/2016 20:36:37 PAGE 1   
 
 
 C51 COMPILER V9.55, COMPILATION OF MODULE UART
@@ -62,7 +62,7 @@ line level    source
   52   1        #if(PARITYBIT != NONE_PARITY)
                 { 
                   ACC = dat;                  //获取校验位P (PSW.0)
-C51 COMPILER V9.55   UART                                                                  05/27/2016 11:03:59 PAGE 2   
+C51 COMPILER V9.55   UART                                                                  05/27/2016 20:36:37 PAGE 2   
 
                     if (P)                      //根据P来设置校验位
                     {
@@ -126,7 +126,7 @@ line level    source
  114   1          //Wait until a character is available: 
  115   1        if(whichuartreceive==1)  
  116   1            {while(uart_rx_cnt == 0);  
-C51 COMPILER V9.55   UART                                                                  05/27/2016 11:03:59 PAGE 3   
+C51 COMPILER V9.55   UART                                                                  05/27/2016 20:36:37 PAGE 3   
 
  117   2            ES = 0;  
  118   2            ch = uart_rx[uart_rx_rp];  

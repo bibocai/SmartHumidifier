@@ -1,1 +1,0 @@
-"src\nokia5110.c" LARGE OPTIMIZE (8,SPEED) BROWSE INCDIR(.\inc) DEBUG OBJECTEXTEND PRINT(.\Listings\nokia5110.lst) TABS (2) OBJECT(.\Objects\nokia5110.obj)
