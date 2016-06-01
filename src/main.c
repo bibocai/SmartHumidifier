@@ -85,18 +85,20 @@ void main()
 		{ 
 			case TimeMode:{
 				lcdPutStr("TIME SET",2,3);
-			 	while（set_over == 1;）
+			 	while(set_over == 1)
 				{ 
-		  			if（key_inc == 1）
-					lcdShowDouble(2,10;(double)max_value,0);   //显示的位置需要改
-					   PD_Time_set++;  //POWEDOWN
-					if(key_dec == 1)
-						disp
+		  			if(key_inc == 1){
+		  			 PD_Time_set++;  //POWEDOWN
+					lcdShowDouble(2,10;(double)PD_Time_set,0);   //显示的位置需要改
+		  			}
+					if(key_dec == 1){
+					lcdShowDouble(2,10;(double)PD_Time_set,0);   //显示的位置需要改
 			        	PD_Time_set--;  
+					}
         		  	}
 			
-				//确认案件按下
-				//计算需要的count的值
+				while(set_over == 0);   //setover为确认按键
+					PD_Count = uint(PD_Time_set/24.4*60*1000);
 	
 				while（PD_Count!= 0）{
 		      	         	Power_Down();
